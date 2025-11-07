@@ -466,81 +466,6 @@
 		}
 	}
 }
-body.popup-open {
-	overflow: hidden;
-}
-.popup-outer-box {
-	display: none;
-	padding: 20px var(--paddingContainer);
-	animation: fadein ease 0.2s;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	z-index: 100;
-	background: fade(#000, 70);
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	overflow-y: auto;
-	overflow-x: hidden;
-	scrollbar-width: none;
-	-ms-overflow-style: none;
-	&::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-	}
-	&.active {
-		display: flex;
-	}
-}
-.popup-box {
-	display: flex;
-	margin: auto;
-	flex-direction: column;
-	flex-shrink: 0;
-	position: relative;
-	overflow: hidden;
-	width: 400px;
-	max-width: 100%;
-	max-height: inherit;
-	background-color: var(--clr-bg-light);
-	border-radius: var(--mainRadius);
-	z-index: 20;
-	.popup-title-wrap, .popup-footer-wrap {
-		width: 100%;
-		flex-shrink: 0;
-	}
-	.popup-title-wrap {
-		padding: 15px;
-	}
-	.popup-content-wrap {
-		width: 100%;
-		padding: 15px;
-	}
-	.btn-action-ico {
-		&.ico-close {
-		}
-	}
-	.btn-popup-close {
-		position: absolute;
-		top: 8px;
-		right: 5px;
-		z-index: 2;
-	}
-	.form-box {
-		margin: 0;
-		padding: 0;
-	}
-	.popup-title {
-		margin-bottom: 10px;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
 @media (max-width: 1023px) {
 	.title-box {
 		&:has(+.tabs-box) {
@@ -564,6 +489,7 @@ body.popup-open {
 			flex-wrap: nowrap;
 		}
 	}
+	
 	.tiles-prices-box {
 		.items-wrap {
 			flex-wrap: nowrap;
