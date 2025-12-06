@@ -6,6 +6,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	//mobile menu
+	const menuButton = document.querySelectorAll('.header .menu-inner-wrap li a');
+	for (i = 0;i < menuButton.length;i++) {
+		menuButton[i].addEventListener('click', function(e) {
+			if (innerWidth < 1024) {
+				if (this.nextElementSibling && this.nextElementSibling.tagName === 'UL') {
+					this.parentElement.classList.toggle('open')
+					e.preventDefault()
+					e.stopPropagation()
+					return false
+				}
+			}
+		})
+	}
+
+
 	//files add
 	const fileBlocks = document.querySelectorAll('.js-field-file');
 	
@@ -37,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 
+	
 
 	//btn tgl and add
 	let tglButtons = document.querySelectorAll('.js-btn-tgl')
